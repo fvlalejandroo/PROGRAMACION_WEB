@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Video</title>
+</head>
+<body>
+    <h1>Subir Video</h1>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="video">Selecciona un video:</label>
+        <input type="file" name="video" id="video" accept="video/*" required>
+        <br>
+        <input type="submit" value="Subir Video">
+    </form>
+</body>
+</html>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["video"])) {
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename($_FILES["video"]["name"]);
+    $uploadOk = 1;
+    $videoFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+    // Verificar si el archivo es un video
+    if ($videoFileType != "mp4" && $videoFileType != "avi" && $videoFileType != "mov" && $videoFileType != "wmv") {
+        echo "Lo sentimos, solo se permiten archivos MP4, AVI, MOV y WMV.";
+        $uploadOk = 0;
+    }
+
+    // Verificar si ocurrió un error durante la carga
+    if ($uploadOk == 0) {
+        echo "Lo sentimos, tu video no pudo ser cargado.";
+    } else {
+        if (move_uploaded_file($_FILES["video"]["tmp_name"], $target_file)) {
+            echo "El video " . basename($_FILES["video"]["name"]) . " ha sido cargado correctamente.";
+        } else {
+            echo "Lo sentimos, hubo un error al cargar tu video.";
+        }
+    }
+}
+?>
