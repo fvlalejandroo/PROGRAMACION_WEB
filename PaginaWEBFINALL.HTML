@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatos: Tu Compañero Felino</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para el encabezado (header) */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            text-align: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Estilos para las tarjetas (cat-card) */
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .cat-card {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .cat-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .cat-card h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .cat-card p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Estilos para la tabla comparativa */
+        .cat-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .cat-table caption {
+            font-size: 24px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .cat-table th, .cat-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .cat-table th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .cat-table tbody tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+
+        .cat-table tbody tr:nth-child(odd) {
+            background-color: #e0e0e0;
+        }
+
+        /* Estilos para el pie de página (footer) */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Estilos para la sección de contacto en el pie de página */
+        .contact-info, .contact-form {
+            background-color: #333; /* Color de fondo */
+            color: #fff; /* Color del texto */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .contact-info p, .contact-form p {
+            font-size: 18px;
+        }
+
+        /* Estilos para el formulario */
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #007bff; /* Color azul similar al diseño gris */
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3; /* Cambio de color al pasar el mouse */
+        }
+
+        /* Estilos para el enlace en el pie de página */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gatos: Tu Compañero Felino</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Galería de Gatos</a></li>
+            <li><a href="#">Información</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="cat-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Persian_in_Cat_Cafe.jpg/800px-Persian_in_Cat_Cafe.jpg" alt="Gato Persa">
+            <h2>Gato Persa</h2>
+            <p>El gato persa es conocido por su pelaje largo y suave. Son gatos tranquilos y cariñosos, ideales como mascotas de compañía.</p>
+        </section>
+
+        <section class="cat-card">
+            <img src="https://us.123rf.com/450wm/axelbueckert/axelbueckert1807/axelbueckert180700012/104288841-hermoso-gato-siam%C3%A9s-aislado-sobre-fondo-blanco.jpg" alt="Gato Siamés">
+            <h2>Gato Siamés</h2>
+            <p>El gato siamés es conocido por su elegante pelaje y sus ojos azules intensos. Son gatos activos y sociables.</p>
+        </section>
+
+        <section class="cat-card">
+            <img src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/02/15172133/Maine-coon-raza-gato-1-1200x1787.jpg" alt="Gato Maine Coon">
+            <h2>Gato Maine Coon</h2>
+            <p>El gato Maine Coon es una raza grande y amigable, con pelaje tupido y orejas puntiagudas. Son excelentes cazadores.</p>
+        </section>
+    </div>
+
+    <table class="cat-table">
+        <caption>Comparación de Razas de Gatos</caption>
+        <thead>
+            <tr>
+                <th>Rasgo</th>
+                <th>Gato Persa</th>
+                <th>Gato Siamés</th>
+                <th>Gato Maine Coon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pelaje</td>
+                <td>Largo y suave</td>
+                <td>Corto y suave</td>
+                <td>Tupido y denso</td>
+            </tr>
+            <tr>
+                <td>Personalidad</td>
+                <td>Tranquilo y cariñoso</td>
+                <td>Activo y sociable</td>
+                <td>Grande y amigable</td>
+            </tr>
+            <tr>
+                <td>Tamaño</td>
+                <td>Mediano</td>
+                <td>Mediano</td>
+                <td>Grande</td>
+            </tr>
+            <tr>
+                <td>Origen</td>
+                <td>Persia</td>
+                <td>Siam</td>
+                <td>Estados Unidos</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video de YouTube Centrado</title>
+    <style>
+        /* Estilo para centrar el video */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh; /* Ajusta la altura según tu preferencia */
+            background-color: #f0f0f0; /* Color de fondo opcional */
+        }
+
+        /* Estilo para el iframe del video */
+        iframe {
+            width: 800px; /* Ajusta el ancho según tu preferencia */
+            height: 450px; /* Ajusta la altura según tu preferencia */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://youtu.be/kltMa6ANyuM?si=M4Zv531ed2e8QhFX" frameborder="0" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
+
+    <footer>
+        <div class="contact-info">
+            <h3>Contacto</h3>
+            <p>Email: info@gatosfelices.com</p>
+            <p>Teléfono: 123-456-7890</p>
+        </div>
+
+        <div class="contact-form">
+            <h3>Envíanos un mensaje</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
